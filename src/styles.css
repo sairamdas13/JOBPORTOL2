@@ -1,0 +1,99 @@
+/* Global reset and layout setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Main container */
+#container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  min-height: 100vh;
+}
+
+/* Header section */
+#header {
+  grid-area: header;
+  background: #ffd54f;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header .logo {
+  display: flex;
+  align-items: center;
+}
+
+#header .logo .logotext {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+#header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main content section */
+#content {
+  grid-area: content;
+  padding: 20px;
+  background: bisque;
+}
+
+#content-hero {
+  margin-bottom: 16px;
+}
+
+.nav-buttons button {
+  margin-right: 8px;
+}
+
+/* Job Portal widgets */
+#content h1 {
+  margin-top: 20px;
+}
+
+#content ul {
+  list-style: none;
+  margin-top: 8px;
+}
+
+#content li {
+  margin-bottom: 6px;
+}
+
+#content li button {
+  margin-left: 10px;
+}
+
+/* Footer section */
+#footer {
+  grid-area: footer;
+  background: #f8bbd0;
+  text-align: center;
+  padding: 10px;
+}
+
+#footer .copyrighttext {
+  font-size: 12px;
+  color: gray;
+}
